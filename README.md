@@ -73,3 +73,9 @@ rails generate devise User
 rails db:migrate
 
 ```
+
+**Update config/environments/development.rb**
+```rb
+config.action_mailer.default_url_options = { host: 'localhost', port: 3006 }
+```
+
