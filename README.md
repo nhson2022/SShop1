@@ -79,3 +79,20 @@ rails db:migrate
 config.action_mailer.default_url_options = { host: 'localhost', port: 3006 }
 ```
 
+**Update app/views/layouts/application.html.erb**
+
+<div class="container">
+  <% if notice.present? %>
+    <div class="alert alert-primary mt-4" role="alert">
+      <%= notice %>
+    </div>
+  <% end %>
+
+  <% if alert.present? %>
+    <div class="alert alert-danger mt-4" role="alert">
+      <%= alert %>
+    </div>
+  <% end %>
+
+  <%= yield %>
+</div>
