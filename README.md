@@ -60,4 +60,16 @@ yarn add bootstrap jquery @popperjs/core
 ./bin/dev
 ```
 
+## Setup devise
 
+Goto page and follow instructions https://github.com/heartcombo/devise
+
+```bash
+bundle add devise
+rails generate devise:install
+rails g devise:views
+
+rails generate devise User
+rails db:migrate
+
+```
