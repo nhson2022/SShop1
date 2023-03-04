@@ -70,13 +70,14 @@ rails generate devise:install
 rails g devise:views
 
 rails generate devise User
+# db/migrate/20230303083538_devise_create_users.rb -- uncomment cac chuc nang
 rails db:migrate
 
 ```
 
 **Update config/environments/development.rb**
 ```rb
-config.action_mailer.default_url_options = { host: 'localhost', port: 3006 }
+config.action_mailer.default_url_options = { host: 'localhost', port: 3008 }
 ```
 
 **Update app/views/layouts/application.html.erb**
@@ -96,3 +97,20 @@ config.action_mailer.default_url_options = { host: 'localhost', port: 3006 }
 
   <%= yield %>
 </div>
+
+**Setup Active Storage**
+```bash
+bin/rails active_storage:install
+bin/rails db:migrate
+```
+
+**Setup Action Text**
+```bash
+bin/rails action_text:install
+bin/rails db:migrate
+```
+
+**Create controller pages home and info**
+```bash
+rails g controller pages home
+```
