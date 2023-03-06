@@ -77,7 +77,7 @@ rails db:migrate
 
 **Update config/environments/development.rb**
 ```rb
-config.action_mailer.default_url_options = { host: 'localhost', port: 3008 }
+config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 ```
 
 **Update app/views/layouts/application.html.erb**
@@ -110,7 +110,7 @@ bin/rails action_text:install
 bin/rails db:migrate
 ```
 
-**Create controller pages home and info**
+**Create controller pages home**
 ```bash
 rails g controller pages home
 ```
