@@ -114,3 +114,4 @@ bin/rails db:migrate
 ```bash
 rails g controller pages home
 ```
+
