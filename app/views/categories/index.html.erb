@@ -39,7 +39,7 @@
 						<td class="d-inline-flex">
 							<%= link_to "Show", category, class: "btn btn-sm btn-info me-1" %>
 							<%= link_to "Edit", edit_category_path(category), class: "btn btn-sm btn-success me-1" %>
-							<%= button_to "Delete", category, method: :delete, class: "btn btn-sm btn-danger me-1" %>
+							<%= button_to "Delete", category, data: {turbo_method: "delete", turbo_confirm: "Are you sure?"}, class: "btn btn-sm btn-danger me-1" %>
 						</td>
 					</tr>
 				<% end %>

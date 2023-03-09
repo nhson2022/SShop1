@@ -1,11 +1,22 @@
 <div class="card mb-3">
 	<div class="card-body">
-		<div id="<%= dom_id item %>">
-			<h5 class="card-title"><%= item.name %></h5>
-			<div>Price: <%= item.price %></div>
-			<div>Category: <%= item.category&.name || "None" %></div>
-			<a href="#" class="btn btn-primary">Buy</a>
-			<a href="#" class="btn btn-secondary">Add to Cash</a>
+		<div class="container text-center">
+			<div class="row row-cols-2">
+				<div class="col">
+					<div id="<%= dom_id item %>">
+						<h5 class="card-title"><%= item.name %></h5>
+						<% if item.avatar.attached? %>
+							<div>
+								<%= image_tag item.avatar, class: "card-image-top" %>
+							</div>
+						<% end %>
+						<div>Price: <%= item.price %></div>
+						<div>Category: <%= item.category&.name || "None" %></div>
+						<a href="#" class="btn btn-primary">Buy</a>
+						<a href="#" class="btn btn-secondary">Add to Cash</a>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
