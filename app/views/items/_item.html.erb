@@ -1,17 +1,11 @@
-<div id="<%= dom_id item %>">
-  <p>
-    <strong>Name:</strong>
-    <%= item.name %>
-  </p>
-
-  <p>
-    <strong>Price:</strong>
-    <%= item.price %>
-  </p>
-
-  <p>
-    <strong>Category:</strong>
-    <%= item.category_id %>
-  </p>
-
+<div class="card mb-3">
+	<div class="card-body">
+		<div id="<%= dom_id item %>">
+			<h5 class="card-title"><%= item.name %></h5>
+			<div>Price: <%= item.price %></div>
+			<div>Category: <%= item.category&.name || "None" %></div>
+			<a href="#" class="btn btn-primary">Buy</a>
+			<a href="#" class="btn btn-secondary">Add to Cash</a>
+		</div>
+	</div>
 </div>

@@ -1,14 +1,33 @@
-<p style="color: green"><%= notice %></p>
-
-<h1>Items</h1>
-
-<div id="items">
-  <% @items.each do |item| %>
-    <%= render item %>
-    <p>
-      <%= link_to "Show this item", item %>
-    </p>
-  <% end %>
+<div class="row mt-4 my-2">
+	<div class="col-4">
+		<h5>Categories</h5>
+	</div>
+	<div class="col-8 text-end">
+		<%= link_to "New item", new_item_path, class: "btn btn-primary" %>
+	</div>
 </div>
-
-<%= link_to "New item", new_item_path %>
+</div>
+<div class="row">
+	<div class="col-4">
+		<div class="list-group">
+			<% @categories.each do |category| %>
+				<a href="#" class="list-group-item list-group-item-action"><%= category.name %></a>
+			<% end %>
+		</div>
+	</div>
+	<div class="col-8">
+		<div class="card">
+			<div class="card-body">
+				<h5 class="card-title">Items</h5>
+				<div id="items">
+					<% @items.each do |item| %>
+						<%= render item %>
+						<p>
+							<%= link_to "Show this item", item %>
+						</p>
+					<% end %>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
