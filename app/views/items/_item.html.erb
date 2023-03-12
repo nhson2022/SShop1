@@ -7,13 +7,13 @@
 						<h5 class="card-title"><%= item.name %></h5>
 						<% if item.avatar.attached? %>
 							<div>
-								<%= image_tag item.avatar, class: "card-image-top" %>
+								<%= image_tag item.avatar.variant(:thumb), class: "card-image-top" %>
 							</div>
 						<% end %>
 						<div>Price: <%= item.price %></div>
 						<div>Category: <%= item.category&.name || "None" %></div>
 						<a href="#" class="btn btn-primary">Buy</a>
-						<a href="#" class="btn btn-secondary">Add to Cash</a>
+						<a href="#" class="btn btn-secondary">Add to Cart</a>
 					</div>
 				</div>
 			</div>

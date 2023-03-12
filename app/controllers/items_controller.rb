@@ -3,7 +3,7 @@ class ItemsController < ApplicationController
 
   # GET /items or /items.json
   def index
-    @items = Item.includes(:category).all
+    @items = Item.search(params)
     @categories = Category.all
   end
 
