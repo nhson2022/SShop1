@@ -15,19 +15,20 @@
 			<% end %>
 		</div>
 	</div>
-	<div class="col-8">
+	<div class="col-6">
 		<div class="card">
 			<div class="card-body">
 				<h5 class="card-title">Items</h5>
 				<div id="items">
 					<% @items.each do |item| %>
 						<%= render item %>
-						<p>
-							<%= link_to "Show this item", item %>
-						</p>
+						
 					<% end %>
+					<%= will_paginate @items %>
 				</div>
 			</div>
 		</div>
+	</div>
+	<div class="col-2">
 	</div>
 </div>

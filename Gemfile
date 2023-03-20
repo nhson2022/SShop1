@@ -82,3 +82,5 @@ end
 gem "devise", "~> 4.9"
 
 gem "local_time", "~> 2.1"
+
+gem "rails-erd", "~> 1.7"

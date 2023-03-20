@@ -3,7 +3,7 @@ class ItemsController < ApplicationController
 
   # GET /items or /items.json
   def index
-    @items = Item.search(params)
+    @items = Item.search(params).paginate(page: params[:page], per_page: 5)
     @categories = Category.all
   end
 

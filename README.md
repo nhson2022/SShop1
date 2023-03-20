@@ -120,3 +120,7 @@ gem 'will_paginate', '~> 3.3'
 gem 'will_paginate-bootstrap-style'
 ```
 
+**Create mycart**
+```bash
+rails g controller mycarts follow buy
+```
